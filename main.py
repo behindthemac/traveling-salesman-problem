@@ -1,9 +1,11 @@
 import numpy as np
+from scipy.spatial import distance
 
 
 def main():
     n = 10
     c = np.random.randn(n, 2)
+    d = [[distance.euclidean(c[i], c[j]) for j in range(n)] for i in range(n)]
 
 
 if __name__ == '__main__':
